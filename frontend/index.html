@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieFlix - Movie Recommendations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1 class="logo">MOVIEFLIX</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h2>Find your next favorite movie.</h2>
+            <p>Search for a movie and discover similar titles.</p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search movies..."
+                >
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <section class="movies-section">
+            <h2 id="sectionTitle">Popular Movies</h2>
+
+            <div id="moviesContainer" class="movies-grid">
+                <!-- Movie cards will be added using JavaScript -->
+            </div>
+        </section>
+
+        <section class="recommendations-section">
+            <h2 id="recommendationTitle"></h2>
+
+            <div id="recommendationsContainer" class="movies-grid">
+                <!-- Recommendations will appear here -->
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

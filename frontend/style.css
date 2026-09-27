@@ -1,0 +1,191 @@
+
+/* 1. Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* 2. Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #0b0b0b;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 3. Main container */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 4. Hero section */
+.hero {
+    padding: 60px 0 45px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+/* 5. Search bar */
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 650px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #e50914;
+}
+
+.search-box button {
+    padding: 14px 24px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-box button:hover {
+    background-color: #b20710;
+}
+
+/* 6. Movie sections */
+.movies-section,
+.recommendations-section {
+    padding: 20px 0 40px;
+}
+
+.movies-section h2,
+.recommendations-section h2 {
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+/* 7. Movie grid */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* 8. Movie cards */
+.movie-card {
+    background-color: #202020;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+    background-color: #303030;
+}
+
+.movie-info {
+    padding: 14px;
+}
+
+.movie-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.movie-info p {
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-top: 6px;
+}
+
+/* 9. Messages */
+.message {
+    color: #b3b3b3;
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+/* 10. Responsive layout */
+@media (max-width: 1000px) {
+    .movies-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 40px 0 30px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .search-box button {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+}
